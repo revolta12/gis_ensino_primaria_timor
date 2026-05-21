@@ -1,0 +1,394 @@
+/* ============================================ */
+/* GIS Ensino Primaria Timor-Leste
+/* Admin Panel Styles
+/* ============================================ */
+
+/* Admin Layout */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header i {
+    font-size: 2.5rem;
+    color: var(--secondary-gold);
+    margin-bottom: 10px;
+}
+
+.sidebar-header h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.sidebar-header small {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+}
+
+.sidebar-menu {
+    padding: 20px 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 12px;
+}
+
+.sidebar-menu a i {
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(243, 156, 18, 0.15);
+    color: var(--secondary-gold);
+    padding-left: 30px;
+}
+
+.sidebar-menu a.active {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--secondary-gold);
+    border-left: 3px solid var(--secondary-gold);
+}
+
+.sidebar-menu hr {
+    margin: 15px 20px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    padding: 20px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background: white;
+    padding: 15px 25px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.page-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-title i {
+    color: var(--secondary-gold);
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-avatar {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-gold);
+}
+
+.admin-name {
+    font-weight: 700;
+}
+
+.admin-greeting {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+/* Cards */
+.stat-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: var(--secondary-gold);
+    font-size: 1.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* Tables */
+.admin-table {
+    width: 100%;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.admin-table th {
+    background: var(--light-bg);
+    padding: 15px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.admin-table tr:hover {
+    background: rgba(243, 156, 18, 0.05);
+}
+
+/* Action Buttons */
+.btn-action {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 3px;
+}
+
+.btn-edit {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498DB;
+}
+
+.btn-edit:hover {
+    background: #3498DB;
+    color: white;
+}
+
+.btn-delete {
+    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
+}
+
+.btn-delete:hover {
+    background: #E74C3C;
+    color: white;
+}
+
+.btn-toggle {
+    background: rgba(149, 165, 166, 0.1);
+    color: #95A5A6;
+}
+
+.btn-toggle:hover {
+    background: #95A5A6;
+    color: white;
+}
+
+/* Status Badges */
+.status-active {
+    background: rgba(39, 174, 96, 0.1);
+    color: #27AE60;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-inactive {
+    background: rgba(149, 165, 166, 0.1);
+    color: #95A5A6;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Forms */
+.admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.admin-form .form-control,
+.admin-form .form-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.admin-form .form-control:focus,
+.admin-form .form-select:focus {
+    border-color: var(--secondary-gold);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+    outline: none;
+}
+
+/* Upload Zone */
+.upload-zone {
+    border: 2px dashed #ddd;
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+    border-color: var(--secondary-gold);
+    background: rgba(243, 156, 18, 0.05);
+}
+
+.upload-zone i {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.gallery-item .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--danger-red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item .delete-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Admin */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        background: var(--primary-blue);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}

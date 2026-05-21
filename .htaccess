@@ -1,0 +1,44 @@
+# =============================================
+# .htaccess - GIS Ensino Primaria Timor-Leste
+# =============================================
+
+RewriteEngine On
+RewriteBase /gis_ensino_primaria_timor/
+
+# =============================================
+# ALLOW ACCESS TO ALL FILES
+# =============================================
+<FilesMatch "\.(php|html|htm)$">
+    Require all granted
+</FilesMatch>
+
+# =============================================
+# SKIP REWRITE FOR EXISTING FILES/DIRECTORIES
+# =============================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Skip rewrite for protected folders and assets
+RewriteRule ^(admin|api|assets|config|includes|uploads|vendor)($|/) - [L]
+
+# =============================================
+# CLEAN URL FOR SCHOOL DETAIL
+# =============================================
+RewriteRule ^escola/([a-z0-9-]+)/?$ public/escola-detail.php?slug=$1 [L,QSA,NC]
+
+# =============================================
+# DEFAULT - REDIRECT TO PUBLIC
+# =============================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]
+
+# =============================================
+# DISABLE DIRECTORY LISTING
+# =============================================
+Options -Indexes
+
+# =============================================
+# SET DEFAULT CHARSET
+# =============================================
+AddDefaultCharset UTF-8
